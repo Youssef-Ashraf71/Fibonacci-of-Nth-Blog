@@ -21,7 +21,7 @@ In mathematical terms, the sequence Fn of Fibonacci numbers is defined by the re
 </p>
 
 ## Space Complexity 
-By optimization and taking the size of the function call stack into consideration we will find it O[N].
+* By optimization and taking the size of the function call stack into consideration we will find it O[N].
 
 ## Code in C++
 prefered constrains `0≤n≤40` for good time compilation (1s) per test.
