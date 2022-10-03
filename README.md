@@ -62,6 +62,7 @@ void solve()
 
 ## Code in C++
 prefered constrains `0≤n≤91` for good time compilation.
+### Recursive Approach
 ```
 #define ll long long
 #include<vector>
@@ -82,6 +83,23 @@ void solve()
     cin>>n;
     if(n==1) cout<<n<<endl;
     else cout<<rec(n);
+}
+```
+
+### Iterative Approach
+```
+#define ll long long
+vector<ll>dp(10000,0);
+void solve()
+{
+    ll n,i=0,j=0,cnt=0;
+    cin>>n;
+    // series indexed from F0,F1,F2,....
+    dp[0]=0; dp[1]=1;
+    for(i=2;i<=n;i++){
+        dp[i]=dp[i-1]+dp[i-2];
+    }
+    cout<<dp[n]<<endl;
 }
 ```
 
