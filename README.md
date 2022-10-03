@@ -1,8 +1,3 @@
-  <video autoplay muted loop id="bg-video">
-    <source src="giphy3.webp" type="video/mp4">
-</video>
-
-
 # Fibonacci of Nth-Blog
 
 
