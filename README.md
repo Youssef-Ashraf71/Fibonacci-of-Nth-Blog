@@ -57,12 +57,16 @@ void solve()
 
 ## Time Complexity: 
  * O[N] but you can easily linearly access any fib number smaller than `N` in O[1] if you have solved for `N`.
+
+## Space Complexity 
+* O[N].
+
+
 <p align="center" width="100%">
     <img width="50%" src="https://user-images.githubusercontent.com/83988379/193692450-bfbb9b20-95fa-4c04-87f0-2b10b693e9f2.jpg">
 </p>
 
-## Space Complexity 
-* O[N].
+
 
 ## Code in C++
 prefered constrains `0≤n≤91` for good time compilation.
