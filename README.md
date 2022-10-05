@@ -164,6 +164,9 @@ but in my code i used '
  new_a = 0 * a + 1 * b; &   new_b = 1 * a + 1 * b; 
 To easily handle the special case n=0.
 ```
+<p align="center" width="100%">
+    <img width="50%" src="https://user-images.githubusercontent.com/83988379/194101016-9e11f9ea-d21b-42f4-9203-730380bdd625.png">
+</p>
 
 ## Time Complexity: 
  * o[log(n)]
