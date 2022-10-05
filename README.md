@@ -118,7 +118,7 @@ void solve()
 ## Time Complexity: 
  * O[N]
 ## Space Complexity 
-* O[1] (constant time).
+ * O[1] (constant time).
 ## Code in C++
 prefered constrains `0≤n≤91` for good time compilation.
 ### Iterative Approach(Bottom Up)
@@ -171,9 +171,9 @@ To easily handle the special case n=0.
 </p>
 
 ## Time Complexity: 
- * o[log(n)]
+ * O[log(n)]
 ## Space Complexity 
-* o[1] 
+* O[1] 
 ## Code in C++
 prefered constrains `0≤n≤91` or `0≤n≤10e18` by taking mod of 1e9+7.
 ###  Matrix Expoentiation Approach
