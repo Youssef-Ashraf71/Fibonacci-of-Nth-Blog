@@ -186,7 +186,7 @@ void solve()
     ll n,i=0,j=0,cnt=0;
     cin>>n;
     Matrix input;
-    // rule >> [{0,1}, {1,1}} n times
+    // rule >> [(0,1), (1,1)] n times
     input.a[0][0] = 0;
     input.a[0][1] = 1;
     input.a[1][0] = 1;
