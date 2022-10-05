@@ -121,11 +121,6 @@ void solve()
 * O[1](constant time).
 ## Code in C++
 prefered constrains `0≤n≤91` for good time compilation.
-### Recursive Approach(Top down)
-```
-
-```
-
 ### Iterative Approach(Bottom Up)
 ```
 #define ll long long
