@@ -42,7 +42,7 @@ void solve()
 }
 ```
 
-# 2-Using Dynamic Programming(memoisation conecpt)
+# 2-Using Dynamic Programming(memoization conecpt)
 ## Theory 
 * from the definition `Fn = Fn-1 + Fn-2` we can easily calculate the nth fibonacci number.
 ### Top Down
