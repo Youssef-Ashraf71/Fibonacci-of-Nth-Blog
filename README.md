@@ -147,3 +147,4 @@ void solve()
 }
 ```
 
+![image](https://user-images.githubusercontent.com/83988379/194048147-bfba1355-aca7-406f-9586-70aeb02c4d6b.png)
