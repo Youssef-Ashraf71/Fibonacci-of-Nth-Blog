@@ -70,6 +70,8 @@ void solve()
 
 ## Code in C++
 prefered constrains `0≤n≤91` for good time compilation.
+
+
 ### Recursive Approach(Top down)
 ```
 #define ll long long
@@ -115,13 +117,22 @@ void solve()
 # 3-Optimize on Dynamic Programming in #2
 ## Theory 
 * We can optimize the space used in method 2 by storing the previous two numbers only because that is all we need to get the next Fibonacci number in series till reaching fib(N). 
+
+
 ## Time Complexity: 
  * O[N]
+ 
+ 
 ## Space Complexity 
- * O[1] (constant time).
+ * O[1] (constant).
+ 
+ 
 ## Code in C++
 prefered constrains `0≤n≤91` for good time compilation.
+
+
 ### Iterative Approach(Bottom Up)
+
 ```
 #define ll long long
 ll first=0,second=1;
@@ -164,7 +175,6 @@ For each recurrence relation, the values of p,q,r and s will be different.
 but in my code i used '
  new_a = 0 * a + 1 * b; &   new_b = 1 * a + 1 * b; 
 To easily handle the special case n=0.
-
 ```
 
 <p align="center" width="100%">
@@ -173,10 +183,15 @@ To easily handle the special case n=0.
 
 ## Time Complexity: 
  * O[log(n)]
+ 
 ## Space Complexity 
 * O[1] 
+
+
 ## Code in C++
 prefered constrains `0≤n≤91` or `0≤n≤10e18` by taking mod of 1e9+7.
+
+
 ###  Matrix Expoentiation Approach
 ```
 #define ll long long
