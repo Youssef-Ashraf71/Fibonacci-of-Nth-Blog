@@ -148,8 +148,22 @@ void solve()
 * Matrix Exponentiation is a useful tool in solving not just the questions related to Fibonacci numbers but other linear recurrence equations too.
 * using the linear recurrence 
 ```
-   new_a = 0 * a + 1 * b;
-   new_b = 1 * a + 1 * b; 
+The general recurrence relation for a series in which a term depends on the previous 2 terms is:
+f(n) = af(n-1) + bf(n-2)
+( For Fibonacci, a=1 and b=1 )
+
+The matrix form of this equation is:
+
+| f(n) | = | p q | X | f(n-1) |
+
+| f(n-1) | | r s | | f(n-2) |
+
+Therefore, we get=
+f(n) = p * f(n-1) + q * f(n-2)  and  f(n-1) = r * f(n-1) + s * f(n-2)
+For each recurrence relation, the values of p,q,r and s will be different.
+but in my code i used '
+ new_a = 0 * a + 1 * b; &   new_b = 1 * a + 1 * b; 
+To easily handle the special case n=0.
 ```
 
 ## Time Complexity: 
