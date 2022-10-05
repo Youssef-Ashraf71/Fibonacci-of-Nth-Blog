@@ -114,62 +114,20 @@ void solve()
 
 # 3-Optimize on Dynamic Programming in #2
 ## Theory 
-* from the definition `Fn = Fn-1 + Fn-2` we can easily calculate the nth fibonacci number.
-* Base Case  ?? > first 2 Elements in the series [0,1].
-* Transition ?? > fib(n)=fib(n-1)+fib(n-2) so our answer for the sub-problem is fib(n-1)+fib(n-2).
-* `BUT` We optimize on the recursion by using DP(Using memoization to avoid repeating subproblems) so we can avoid the repeated work done in #1 by storing the Fibonacci numbers calculated so far. 
-* so we compute the result and store it in the array, associating the result with the input that generated it. The next time the same subproblem needs to be solved, the corresponding result will already be in the array so you can access it linearly.
-
-
+* We can optimize the space used in method 2 by storing the previous two numbers only because that is all we need to get the next Fibonacci number in series till reaching fib(N). 
 ## Time Complexity: 
- * O[N] but you can easily linearly access any fib number smaller than `N` in O[1] if you have solved for `N`.
-<p align="center" width="100%">
-    <img width="50%" src="https://user-images.githubusercontent.com/83988379/193692450-bfbb9b20-95fa-4c04-87f0-2b10b693e9f2.jpg">
-</p>
-
+ * O[N]
 ## Space Complexity 
-* O[N].
-
+* O[1](constant time).
 ## Code in C++
 prefered constrains `0≤n≤91` for good time compilation.
 ### Recursive Approach(Top down)
 ```
-#define ll long long
-#include<vector>
-vector<ll>dp(100,0);
-ll rec(ll n){
-    // base case
-    if(!n) return dp[0]=1;
-    if(n==1) return dp[1]=1;
-    
-    // dp memoisation
-    if(dp[n]) return dp[n];
-    // transition
-    return dp[n]=rec(n-1)+rec(n-2);
-}
-void solve()
-{
-    ll n,i=0,j=0,cnt=0;
-    cin>>n;
-    if(n==1) cout<<n<<endl;
-    else cout<<rec(n);
-}
+
 ```
 
 ### Iterative Approach(Bottom Up)
 ```
-#define ll long long
-vector<ll>dp(10000,0);
-void solve()
-{
-    ll n,i=0,j=0,cnt=0;
-    cin>>n;
-    // series indexed from F0,F1,F2,....
-    dp[0]=0; dp[1]=1;
-    for(i=2;i<=n;i++){
-        dp[i]=dp[i-1]+dp[i-2];
-    }
-    cout<<dp[n]<<endl;
-}
+
 ```
 
