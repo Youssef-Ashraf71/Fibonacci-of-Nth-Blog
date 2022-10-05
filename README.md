@@ -146,7 +146,6 @@ void solve()
 # 4-Using Matrix Exponentiation
 ## Theory 
 * Matrix Exponentiation is a useful tool in solving not just the questions related to Fibonacci numbers but other linear recurrence equations too.
-* using the linear recurrence 
 ```
 The general recurrence relation for a series in which a term depends on the previous 2 terms is:
 f(n) = af(n-1) + bf(n-2)
