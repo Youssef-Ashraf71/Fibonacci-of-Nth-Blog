@@ -146,10 +146,11 @@ void solve()
 # 4-Using Matrix Exponentiation
 ## Theory 
 * Matrix Exponentiation is a useful tool in solving not just the questions related to Fibonacci numbers but other linear recurrence equations too.
-```
-The general recurrence relation for a series in which a term depends on the previous 2 terms is:
-f(n) = af(n-1) + bf(n-2)
-( For Fibonacci, a=1 and b=1 )
+
+``` 
+  The general recurrence relation for a series in which a term depends on the previous 2 terms is:
+  f(n) = af(n-1) + bf(n-2)
+  ( For Fibonacci, a=1 and b=1 )
 
 The matrix form of this equation is:
 
@@ -163,6 +164,7 @@ For each recurrence relation, the values of p,q,r and s will be different.
 but in my code i used '
  new_a = 0 * a + 1 * b; &   new_b = 1 * a + 1 * b; 
 To easily handle the special case n=0.
+
 ```
 <p align="center" width="100%">
     <img width="100%" src="https://user-images.githubusercontent.com/83988379/194101016-9e11f9ea-d21b-42f4-9203-730380bdd625.png">
@@ -174,10 +176,9 @@ To easily handle the special case n=0.
 * o[log(n)] 
 ## Code in C++
 
-prefered constrains `0≤n≤91` for good time compilation.
+prefered constrains `0≤n≤91` or `0≤n≤10e18` by taking mod of 1e9+7.
 
 ###  Matrix Expoentiation Approach
-<!-- {% raw %} -->
 ```
 #define ll long long
 struct Matrix {
@@ -221,4 +222,4 @@ void solve()
     cout << answer.a[1][0] << endl;
 }
 ```
-<!--  {% endraw %} -->
+
