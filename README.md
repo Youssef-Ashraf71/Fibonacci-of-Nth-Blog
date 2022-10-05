@@ -24,6 +24,15 @@
 <a href="https://www.leetcode.com/yoyobunt" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="yoyobunt" height="30" width="40" /></a>
 </p>
 
+# Content
+* [Definition]()
+* #1 [recursion]()
+* #2 [DP]()
+* #3 [Optimize on DP]()
+* #4 [Matrix Exponentiation]()
+
+
+
 
 <p align="center" width="100%">
     <img width="70%" height=400px src="https://user-images.githubusercontent.com/83988379/193649172-c308df87-5a69-40ca-81bf-70bcf62981b6.jpg">
