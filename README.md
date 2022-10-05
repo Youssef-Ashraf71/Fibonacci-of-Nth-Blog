@@ -153,10 +153,11 @@ void solve()
 ## Code in C++
 prefered constrains `0≤n≤91` for good time compilation.
 ###  Approach(Bottom Up)
+{% raw %}
 ```
 #define ll long long
 struct Matrix {
- {% raw %}   ll a[2][2] = {{0,0},{0,0}}; {% endraw %} 
+    ll a[2][2] = {{0,0},{0,0}}; 
     ll a[2][2] = {{0,0},{0,0}};
     Matrix operator *(const Matrix& anatany) {
         Matrix Fib;
@@ -196,3 +197,4 @@ void solve()
     cout << answer.a[1][0] << endl;
 }
 ```
+{% endraw %} 
