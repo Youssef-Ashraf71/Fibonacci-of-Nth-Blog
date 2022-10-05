@@ -147,12 +147,14 @@ void solve()
 ## Theory 
 * 
 ## Time Complexity: 
- * 
+ * o[log(n)]
 ## Space Complexity 
-* 
+* o[log(n)] 
 ## Code in C++
+
 prefered constrains `0≤n≤91` for good time compilation.
-###  Approach(Bottom Up)
+
+###  Matrix Expoentiation Approach
 <!-- {% raw %} -->
 ```
 #define ll long long
@@ -173,7 +175,7 @@ struct Matrix {
 };
 Matrix expoentiate(Matrix a, ll k) {
     Matrix Fib;
-   for(int i=0;i<2;i++)  Fib.a[i][i] = 1;  // linear expo for faster flatten
+   for(int i=0;i<2;i++)  Fib.a[i][i] = 1;  
     while(k>0) {
         if(k&1) {
             Fib = Fib * a;
