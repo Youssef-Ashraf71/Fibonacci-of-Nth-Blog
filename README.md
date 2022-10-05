@@ -142,3 +142,16 @@ void solve()
 }
 ```
 
+
+# 4-
+## Theory 
+* 
+## Time Complexity: 
+ * 
+## Space Complexity 
+* 
+## Code in C++
+prefered constrains `0≤n≤91` for good time compilation.
+###  Approach(Bottom Up)
+```
+```
