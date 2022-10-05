@@ -52,7 +52,8 @@ void solve()
 * so we compute the result and store it in the array, associating the result with the input that generated it. The next time the same subproblem needs to be solved, the corresponding result will already be in the array so you can access it linearly.
 
 ### Bottom Up
-* start with the first 2 known numbers in the sequence and then buid your answer till reach fib(N) using the transition formula `Fn = Fn-1 + Fn-2`.
+* start with the first 2 known numbers in the sequence and then buid your answer till reach fib(N)
+ using the transition formula `Fn = Fn-1 + Fn-2`.
 
 ## Time Complexity: 
  * O[N] but you can easily linearly access any fib number smaller than `N` in O[1] if you have solved for `N`.
