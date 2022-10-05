@@ -145,7 +145,13 @@ void solve()
 
 # 4-Using Matrix Exponentiation
 ## Theory 
-* 
+* Matrix Exponentiation is a useful tool in solving not just the questions related to Fibonacci numbers but other linear recurrence equations too.
+* using the linear recurrence 
+```
+   new_a = 0 * a + 1 * b;
+   new_b = 1 * a + 1 * b; 
+```
+
 ## Time Complexity: 
  * o[log(n)]
 ## Space Complexity 
