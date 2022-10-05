@@ -112,7 +112,7 @@ void solve()
 ```
 
 
-# 3-Optimize on Dynamic Programming sol(2)
+# 3-Optimize on Dynamic Programming in #2
 ## Theory 
 * from the definition `Fn = Fn-1 + Fn-2` we can easily calculate the nth fibonacci number.
 * Base Case  ?? > first 2 Elements in the series [0,1].
