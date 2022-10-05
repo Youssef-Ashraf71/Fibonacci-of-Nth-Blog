@@ -143,7 +143,7 @@ void solve()
 ```
 
 
-# 4-Using Matrix Expontetiation
+# 4-Using Matrix Exponentiation
 ## Theory 
 * 
 ## Time Complexity: 
