@@ -156,6 +156,7 @@ prefered constrains `0≤n≤91` for good time compilation.
 ```
 #define ll long long
 struct Matrix {
+ {% raw %}   ll a[2][2] = {{0,0},{0,0}}; {% endraw %} 
     ll a[2][2] = {{0,0},{0,0}};
     Matrix operator *(const Matrix& anatany) {
         Matrix Fib;
