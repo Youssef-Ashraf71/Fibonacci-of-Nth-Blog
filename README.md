@@ -181,7 +181,7 @@ prefered constrains `0≤n≤91` or `0≤n≤10e18` by taking mod of 1e9+7.
 ```
 #define ll long long
 struct Matrix {
-    ll a[2][2] = {{0,0},{0,0}};
+    ll a[2][2] = { {0,0},{0,0} };
     Matrix operator *(const Matrix& anatany) {
         Matrix Fib;
        for(int i=0;i<2;i++) {
