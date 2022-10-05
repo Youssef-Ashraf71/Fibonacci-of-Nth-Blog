@@ -166,8 +166,9 @@ but in my code i used '
 To easily handle the special case n=0.
 
 ```
+
 <p align="center" width="100%">
-    <img width="100%" src="https://user-images.githubusercontent.com/83988379/194101016-9e11f9ea-d21b-42f4-9203-730380bdd625.png">
+    <img width="70%" src="https://user-images.githubusercontent.com/83988379/194101016-9e11f9ea-d21b-42f4-9203-730380bdd625.png">
 </p>
 
 ## Time Complexity: 
