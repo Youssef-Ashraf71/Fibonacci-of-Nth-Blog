@@ -128,6 +128,22 @@ prefered constrains `0≤n≤91` for good time compilation.
 
 ### Iterative Approach(Bottom Up)
 ```
-
+#define ll long long
+ll first=0,second=1;
+void init(){
+    first=0; second=1;
+}
+void fib(ll n){
+   for(ll i=2;i<=n;i++){
+        ll next=first+second;
+        first=second; second=next;
+   }
+}
+void solve()
+{
+    ll n,i=0,j=0,cnt=0;
+    cin>>n;
+    fib(n); cout<<second<<endl; init();
+}
 ```
 
