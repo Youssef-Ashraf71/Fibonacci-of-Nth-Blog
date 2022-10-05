@@ -62,7 +62,7 @@ void solve()
 
 ## Code in C++
 prefered constrains `0≤n≤91` for good time compilation.
-### Recursive Approach
+### Recursive Approach(Top down)
 ```
 #define ll long long
 #include<vector>
@@ -86,7 +86,7 @@ void solve()
 }
 ```
 
-### Iterative Approach
+### Iterative Approach(Bottom Up)
 ```
 #define ll long long
 vector<ll>dp(10000,0);
