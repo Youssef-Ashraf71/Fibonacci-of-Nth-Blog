@@ -143,7 +143,7 @@ void solve()
 ```
 
 
-# 4-
+# 4-Using Matrix Expontetiation
 ## Theory 
 * 
 ## Time Complexity: 
@@ -154,4 +154,44 @@ void solve()
 prefered constrains `0≤n≤91` for good time compilation.
 ###  Approach(Bottom Up)
 ```
+#define ll long long
+struct Matrix {
+    ll a[2][2] = {{0,0},{0,0}};
+    Matrix operator *(const Matrix& anatany) {
+        Matrix Fib;
+       for(int i=0;i<2;i++) {
+           for (int j=0;j<2; j++) {
+               for (int k=0;k<2; k++) {
+                   Fib.a[i][k] = (Fib.a[i][k] + (ll) a[i][j] * anatany.a[j][k]) ;
+               }
+           }
+       }
+        return Fib;
+    }
+};
+Matrix expoentiate(Matrix a, ll k) {
+    Matrix Fib;
+   for(int i=0;i<2;i++)  Fib.a[i][i] = 1;  // linear expo for faster flatten
+    while(k>0) {
+        if(k&1) {
+            Fib = Fib * a;
+        }
+        a=a*a;
+        k/=2;
+    }
+    return Fib;
+}
+void solve()
+{
+    ll n,i=0,j=0,cnt=0;
+    cin>>n;
+    Matrix input;
+    // rule >> [{0,1}, {1,1}} n times
+    input.a[0][0] = 0;
+    input.a[0][1] = 1;
+    input.a[1][0] = 1;
+    input.a[1][1] = 1;
+    Matrix answer = expoentiate(input,n);
+    cout << answer.a[1][0] << endl;
+}
 ```
