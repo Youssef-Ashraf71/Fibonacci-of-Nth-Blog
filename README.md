@@ -1,3 +1,7 @@
+
+<!--
+[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=8784836&assignment_repo_type=AssignmentRepo)  -->
+
 # Fibonacci of Nth-Blog
 
 ## Contributors <a name = "Contributors"></a>
@@ -25,14 +29,6 @@
 </p>
 
 # Content
-* [Definition]()
-* #1 [recursion]()
-* #2 [DP]()
-* #3 [Optimize on DP]()
-* #4 [Matrix Exponentiation]()
-
-
-
 
 <p align="center" width="100%">
     <img width="70%" height=400px src="https://user-images.githubusercontent.com/83988379/193649172-c308df87-5a69-40ca-81bf-70bcf62981b6.jpg">
@@ -214,7 +210,7 @@ To easily handle the special case n=0.
 </p>
 
 ## Time Complexity: 
- * O[log(n)]
+ * O[log(n)] as we are using fastpower Divide and Conquer Technique
  
 ## Space Complexity 
 * O[1] 
@@ -267,6 +263,116 @@ void solve()
     cout << answer.a[1][0] << endl;
 }
 ```
+
+# 5-Using Binet’s formula
+## Theory 
+* In this method, we directly implement the formula for the nth term in the Fibonacci series. 
+* `Fn = {[(√5 + 1)/2] ^ n} / √5 `
+
+## Time Complexity: 
+ * O[Log N]
+ 
+## Space Complexity 
+* O[1] 
+
+
+## Code in C++
+prefered constrains `0≤n≤70`
+
+
+### Binet’s formula Approach
+```
+ll fib(ll n) {
+    double phi = (1 + sqrt(5)) / 2;
+    return round(pow(phi,(double)n) / sqrt(5));
+}
+void solve()
+{
+    ll n,i=0,j=0,cnt=0;
+    cin>>n;
+    cout<<fib(n)<<endl;
+}
+```
+
+# 6-Using DP On Matrix Exponentiation
+## Theory 
+* one more interesting recurrence formula that can be used to find n’th Fibonacci Number.
+* How this formula is derived?
+
+![quicklatex com-eee4fa0c08f84de02fd9767ad0206d6c_l3](https://user-images.githubusercontent.com/83988379/194590164-7dc3ff2d-b4c5-468f-947f-94a80b3e28f8.svg)
+```
+Taking determinant on both sides, we get 
+
+(-1)n = Fn+1Fn-1 - Fn2 
+ 
+Moreover, since AnAm = An+m for any square matrix A, 
+the following identities can be derived (they are obtained 
+from two different coefficients of the matrix product)
+
+FmFn + Fm-1Fn-1 = Fm+n-1         -------------------------->(1)
+
+By putting n = n+1 in equation(1),
+FmFn+1 + Fm-1Fn = Fm+n             ------------------------>(2)
+
+Putting m = n in equation(1).
+F2n-1 = Fn2 + Fn-12
+Putting m = n in equation(2)
+
+F2n = (Fn-1 + Fn+1)Fn = (2Fn-1 + Fn)Fn 
+( By putting Fn+1 = Fn + Fn-1 )
+To get the formula to be proved, we simply need to do the following 
+If n is even(n&1->true), we can put k = n/2 
+If n is odd(n&1->false), we can put k = (n+1)/2
+
+```
+
+## Time Complexity: 
+ * O[Log N]
+ 
+## Space Complexity 
+* O[N] 
+
+
+## Code in C++
+prefered constrains `0≤n≤92`
+
+```
+vector<ll>dp((int)1e3,0);
+ll fib(ll n)
+{
+    if (!n) return dp[n]=n;
+    if (n == 1 || n == 2)  return dp[n]=1;
+    if (dp[n])  return dp[n];
+    ll po = (n & 1)? (n+1)/2 : n/2;
+  return  dp[n] = (n & 1)? (fib(po)*fib(po) + fib(po-1)*fib(po-1)): (2*fib(po-1) + fib(po))*fib(po);
+}
+
+void solve()
+{
+    ll n,i=0,j=0,cnt=0;
+    cin>>n;
+    cout<<fib(n)<<endl;
+}
+```
+
+# Comparison 
+
+| Method                      | Time Complexity | Space Complexity |
+|-----------------------------|-----------------|------------------|
+|Recursion                    | O(2^N)          | O(N)             |
+|Dynamic Programming          | O(N)            | O(N)             |
+|Optimize on DP               | O(N)            | O(1)             |
+|Matrix Exponentiation        | O(Log N)        | O(1)             |
+|Binet’s formula              | O(Log N)        | O(1)             |
+|DP On Matrix Exponentiation  | O(Log N)        | O(N)             |
+
+
+# References
+  * [Matrix Exponentiation 1](https://usaco.guide/plat/matrix-expo?lang=cpp)
+  * [Matrix Exponentiation 2](https://www.youtube.com/watch?v=eMXNWcbw75E)
+  * [Dynamic Programming](https://www.youtube.com/watch?v=YBSt1jYwVfU)
+  * [Binet’s formula](https://www.sciencedirect.com/science/article/pii/S0195669807000595#:~:text=In%201843,%20Binet%20gave%20a,%5D,%20%5B28%5D)
+  * [DP on Matrix Expo](https://www.geeksforgeeks.org/program-for-nth-fibonacci-number/)
 
 
 
